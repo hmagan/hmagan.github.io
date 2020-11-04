@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styling.css"/>
+  </head>
+  <header>
+    <nav class="nav-bar">
+      <ul id="header-list">
+        <li class="nav-link"><a href="about.html"> About </a></li>
+        <li class="nav-link"><a href="index.html"> Dashboard </a></li>
+        <li class="nav-link"><a href="contact.html"> Contact </a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div id="open-wrapper">
+      <div id="opener">
+          <h2>In this game, you must remember the correct sequence of colors. The length of the sequence increases with each successive guess. Once the sequence has been shown to you, click each button in the correct order. Click the button to get started.</h2>
+          <div id="next"><p id="next-text"> &#8594; </p></div>
+      </div>
+    </div>
+    <div id="canvas">
+        <h4> What was the sequence? </h4>
+        <div id="simon-grid">
+            <div class="square" id="green"></div>
+            <audio id="green-audio">
+                <source src="../audio/green.mp3" type="audio/mpeg">
+            </audio>
+            <div class="square" id="red"></div>
+            <audio id="red-audio">
+                <source src="../audio/red.mp3" type="audio/mpeg">
+            </audio>
+            <div class="square" id="yellow"></div>
+            <audio id="yellow-audio">
+                <source src="../audio/yellow.mp3" type="audio/mpeg">
+            </audio>
+            <div class="square" id="blue"></div>
+            <audio id="blue-audio">
+                <source src="../audio/blue.mp3" type="audio/mpeg">
+            </audio>
+        </div>  
+    </div>
+    <div class="center">
+        <h4 id="point-count"></h4>
+        <div id="try-again"><p id="try-text">Try again</p></div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../javascript/simon.js"></script>
+</html>

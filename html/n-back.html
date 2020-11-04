@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styling.css"/>
+  </head>
+  <header>
+    <nav class="nav-bar">
+      <ul id="header-list">
+        <li class="nav-link"><a href="about.html"> About </a></li>
+        <li class="nav-link"><a href="index.html"> Dashboard </a></li>
+        <li class="nav-link"><a href="contact.html"> Contact </a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div id="open-wrapper">
+      <div id="opener">
+          <h2 id="n-opener">You will be presented with a visual stimulus. Simultaneously, an audio clip of a letter being spoken will be played. It is your job to say if either of the current stimuli match the ones <i>n</i> tests back, where n increases by one if you get all the tests correct and decreases by one if you get one wrong. If you think it does match, press the button or the spacebar to make your guess. You will know if you were right or not at the start of the next trial. These trials will come in waves of 16. Click <a href="https://en.wikipedia.org/wiki/N-back" target="_blank">here</a> for more information.</h2>
+          <div id="next"><p id="next-text"> &#8594; </p></div>
+      </div>
+    </div>
+    <div id="back-wrap">
+        <h4 id="n-test">1-back test</h4>
+        <div id="game-grid">
+            <div class="cell" id="0"></div>
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+            <audio id="k-audio">
+                <source src="../audio/K.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="n-audio">
+                <source src="../audio/N.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="o-audio">
+                <source src="../audio/O.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="t-audio">
+                <source src="../audio/T.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="x-audio">
+                <source src="../audio/X.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <button type="button" id="match"> Match </button>
+        <h3 id="round">Round: 1</h3>
+    </div>
+    <div id="round-end">
+        <h4 id="points">Score for this round:  </h4>
+        <h4 id="strikes">Total score:  </h4>
+        <div id="continue" style="border: 2px solid black;"><p class="continue-text" style="margin: 0;">Play again</p></div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../javascript/n-back.js"></script>
+</html>
